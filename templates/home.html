@@ -1,15 +1,40 @@
 {% extends "base.html" %}
 
-{% block title%} Home {% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
 
 <div class="header-title">
-    <h2>Welcome to my blog</h2>
+    <h2>Welcome to my blog, {{ name }}!</h2>
+    <p>This is my personal space to share what I learn about Flask, web development, and programming in general.</p>
 </div>
 
-<div class="personal-blog">
-    <p>This is my personal blog.</p>
+
+<div class="intro">
+    <h3>About Me</h3>
+    <p>Hi, I'm {{ name }}. I'm a junior developer who loves coding and learning new frameworks.</p>
+</div>
+
+<div class="recent-posts">
+    <h3>Recent Posts</h3>
+    <ul>
+        {% for post in posts %}
+            <li><a href="{{ url_for('post', post_id=post.id) }}">{{post.title}}</a></li>
+        {% else%}
+            <li>No posts yet.</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<div class="cta">
+    <h3>Want to know more about me?</h3>
+    <a href="{{ url_for('about') }}" class="btn">Learn More</a>
+</div>
+
+
+<div class="footer-note">
+    <p>Follow my journey, learn with me, and let's build something amazing together!</p>
 </div>
 
 {% endblock %}

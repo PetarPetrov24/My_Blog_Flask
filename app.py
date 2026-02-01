@@ -10,7 +10,8 @@ def home():
 @app.route("/about")
 def about():
     name = "Peter"
-    return render_template('about.html')
+    framework = "Flask"
+    return render_template('about.html', name=name, framework=framework)
 
 @app.route("/posts")
 def post():
