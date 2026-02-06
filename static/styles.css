@@ -1,0 +1,43 @@
+body, a {
+    background-color: black;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 5px #00ff41;
+}
+
+.nav-bar {
+    padding: 3rem 0;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 6em;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-bar li a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    border: 1px solid  #00ff00;
+    border-radius: 0.2em;
+    transition: 0.3s;
+}
+
+.nav-bar li a:hover {
+    background-color: #00ff00;
+    color: black;
+    box-shadow: 0 0 10px #00ff00;
+}
