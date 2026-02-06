@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Blog{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='about.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/posts.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/home.css') }}">
 </head>
 <body>
     <div class="nav-bar">
         <ul>
             <li><a href="{{url_for('home')}}">Home</a></li>
             <li><a href="{{url_for('posts')}}">Posts</a></li>
-            <li><a href="{{url_for('about')}}">About Me</a></li>
+            <li><a href="{{url_for('about')}}">About</a></li>
         </ul>
     </div>
     <main>

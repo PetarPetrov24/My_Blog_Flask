@@ -5,21 +5,15 @@
 {% block content %}
 
 <div class="header-title">
-    <h2>Welcome to my blog!</h2>
+    <h2>Welcome to my blog</h2>
     <p>This is my personal space to share what I learn about Flask, web development, and programming in general.</p>
 </div>
 
-
-<div class="intro">
-    <h3>About Me</h3>
-    <p>Hi, I'm {{ name }}. I'm a junior developer who loves coding and learning new frameworks.</p>
-</div>
-
 <div class="recent-posts">
-    <h3>Recent Posts</h3>
+    <h2>Recent Posts</h2>
     <ul>
         {% for post in posts %}
-            <h3>{{ post.title }}</h3>
+            <h4>{{ post.title }}</h4>
         {% else%}
             <li>No posts yet.</li>
         {% endfor %}
@@ -28,7 +22,7 @@
 
 
 <div class="cta">
-    <h3>Want to know more about me?</h3>
+    <h2>Want to know more about me?</h2>
     <a href="{{ url_for('about') }}" class="btn">Learn More</a>
 </div>
 

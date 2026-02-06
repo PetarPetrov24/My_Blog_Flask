@@ -1,0 +1,63 @@
+.post-header h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00ff41;
+    font-size: 28px;
+        text-shadow:
+        0 0 5px #00ff41,
+        0 0 10px #00ff41,
+        0 0 20px #00ff41;
+    animation: neonPulse 1.5s infinite alternate;
+}
+
+@keyframes neonPulse {
+    0% {
+        text-shadow:
+            0 0 5px #00ff41,
+            0 0 10px #00ff41,
+            0 0 20px #00ff41;
+    }
+    25% {
+        text-shadow:
+            0 0 10px #00ff41,
+            0 0 15px #00ff41,
+            0 0 25px #00ff41;
+    }
+    50% {
+        text-shadow:
+            0 0 7px #00ff41,
+            0 0 12px #00ff41,
+            0 0 22px #00ff41;
+    }
+    75% {
+        text-shadow:
+            0 0 12px #00ff41,
+            0 0 18px #00ff41,
+            0 0 30px #00ff41;
+    }
+    100% {
+        text-shadow:
+            0 0 5px #00ff41,
+            0 0 10px #00ff41,
+            0 0 20px #00ff41;
+    }
+}
+
+.post-header h2 {
+    margin-top: 0;
+}
+
+.post-content h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em 0 0.5em 0;
+}
+
+.post-content article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10em 0 10em;
+}
