@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Intro page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/intro.css') }}">
+</head>
+<body>
+    <div class="matrix-intro">
+        <p id="matrix-text" class="matrix-text"></p>
+    </div>
+    
+    <div class="outer-matrix-content">
+        <div id="white-rabbit-png" class="white-rabbit-png">
+            <img src="{{ url_for('static', filename='images/white-rabbit.png')}}" alt="white rabbit">
+        </div>
+            
+        <div class="home-page-btn">
+            <a href="{{ url_for('home')}}">Enter the System</a>
+        </div>
+    </div>
+    <script defer src="{{ url_for('static', filename='js/matrix.js') }}"></script>
+</body>
+</html>

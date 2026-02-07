@@ -1,0 +1,89 @@
+body, a {
+    background-color: black;
+    text-shadow: 0 0 5px #00ff41,
+                 0 0 10px #00ff41,
+                 0 0 20px #00ff41;
+}
+
+.matrix-intro, .home-page-btn {
+    color: #00ff41;
+    font-family: monospace;
+    animation: flicker 0.15s infinite alternate; 
+}
+
+@keyframes flicker {
+    0% { opacity: 0.85; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9;}
+}
+
+.matrix-text {
+    font-size: 1.4rem;
+    text-align: center;
+    min-height: 2em;
+    animation: flicker 0.12s infinite;
+    text-shadow:
+        0 0 2px #00ff41,
+        0 0 6px #00ff41,
+        0 0 12px #00ff41;
+}
+
+.outer-matrix-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.white-rabbit-png img {
+    width: 220px;
+    height: 150px;
+}
+
+.white-rabbit-png {
+    animation: glow 0.8s alternate infinite;
+    filter: drop-shadow(0 0 4px #00ff41)
+            drop-shadow(0 0 6px #00ff41)
+            drop-shadow(0 0 8px #00ff41);
+}
+
+.home-page-btn a {
+    text-decoration: none;
+    font-size: 22px;
+    font-family: monospace;
+    color: #00ff00;
+}
+
+.white-rabbit-png,
+.home-page-btn a {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+    pointer-events: none;
+}
+
+.white-rabbit-png.show-final,
+.home-page-btn a.show-final {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.white-rabbit-png.show-final img {
+    animation: rabbit-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes rabbit-glow {
+    from {
+        filter: drop-shadow(0 0 5px #00ff41);
+    }
+    to {
+        filter: drop-shadow(0 0 12px #00ff41);
+    }
+}
+
+
+
+

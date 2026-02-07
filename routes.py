@@ -3,6 +3,11 @@ from models import Post
 
 def register_app(app):
     @app.route("/")
+    def intro():
+        return render_template('intro.html')
+
+
+    @app.route("/home")
     def home():
         name = "Peter"
         all_posts = Post.query.all()
