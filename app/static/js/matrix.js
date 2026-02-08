@@ -19,11 +19,11 @@ function typeSentence() {
         charIndex++;
         setTimeout(typeSentence, 200); 
     } else {
-        // Done with this sentence
+
         if (sentenceIndex < sentences.length - 1) {
-            setTimeout(deleteSentence, 1200); // wait then delete
+            setTimeout(deleteSentence, 1200); 
         } else {
-            // Last sentence finished → show bunny & button
+
             whiteRabbit.classList.add("show-final");
             homePageBtn.classList.add("show-final");
         }
@@ -34,10 +34,10 @@ function deleteSentence() {
     if (charIndex > 0) {
         textElement.textContent = sentences[sentenceIndex].substring(0, charIndex - 1);
         charIndex--;
-        setTimeout(deleteSentence, 30); // delete speed
+        setTimeout(deleteSentence, 30); 
     } else {
         sentenceIndex++;
-        setTimeout(typeSentence, 400); // start next sentence
+        setTimeout(typeSentence, 400);
     }
 }
 

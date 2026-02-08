@@ -9,23 +9,10 @@
     <p>This is my personal space to share what I learn about Flask, web development, and programming in general.</p>
 </div>
 
-<div class="recent-posts">
-    <h2>Recent Posts</h2>
-    <ul>
-        {% for post in posts %}
-            <h4>{{ post.title }}</h4>
-        {% else%}
-            <li>No posts yet.</li>
-        {% endfor %}
-    </ul>
-</div>
-
-
 <div class="cta">
     <h2>Want to know more about me?</h2>
     <a href="{{ url_for('about') }}" class="btn">Learn More</a>
 </div>
-
 
 <div class="footer-note">
     <p>Follow my journey, learn with me, and let's build something amazing together!</p>

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="post-detail">
+
+    <h2>{{ post.title }}</h2>
+
+    <small>
+        Created: {{ post.created_at.strftime("%d %B %Y") }}
+    </small>
+
+    <article>
+        <p>{{ post.content | safe }}</p>
+    </article>
+
+    <div class="back-btn">
+        <a href="{{ url_for('posts') }}">← Back to Posts</a>
+    </div>
+
+</div>
+
+{% endblock %}

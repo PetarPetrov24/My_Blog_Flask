@@ -1,11 +1,13 @@
 from flask import Flask, render_template
-from extensions import db
-from routes import register_app
+from .extensions import db
+from .routes import register_app
 from decouple import config
 
 
 def create_app():
     app = Flask(__name__)
+
+    app.config['SECRET_KEY'] = config('SECRET_KEY')
 
     DB_USER = config('DB_USER')
     DB_PASSWORD = config('DB_PASSWORD')

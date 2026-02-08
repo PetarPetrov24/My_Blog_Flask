@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title%}Posts{% endblock %}
+
+{% block content %}
+
+<div class="post-header">
+    <h2>All Posts</h2>
+</div>
+
+<div class="post-content">
+    {% for post in posts %}
+    <div class="post">
+        <h3>
+            <a href="{{ url_for('post_detail', id=post.id) }}">
+                {{ post.title }}
+            </a>
+        </h3>
+        <article>{{ post.content[:30]}}...</article>
+
+        <div class="post-actions">
+            <a href="{{ url_for('post_detail', id=post.id) }}" class="read-more-btn">Read more →</a>
+            <a href="{{ url_for('delete_post', id=post.id) }}" class="delete-btn">Delete</a>
+        </div>   
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

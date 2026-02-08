@@ -1,0 +1,102 @@
+body {
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.update-post-header h2 {
+    color:#00ff00;
+    text-shadow:
+        0 0 5px #00ff41,
+        0 0 10px #00ff41,
+        0 0 20px #00ff41;
+    animation: neonPulse 1.5s infinite alternate;
+}
+
+@keyframes neonPulse {
+    0% {
+        text-shadow:
+            0 0 5px #00ff41,
+            0 0 10px #00ff41,
+            0 0 20px #00ff41;
+    }
+    25% {
+        text-shadow:
+            0 0 10px #00ff41,
+            0 0 15px #00ff41,
+            0 0 25px #00ff41;
+    }
+    50% {
+        text-shadow:
+            0 0 7px #00ff41,
+            0 0 12px #00ff41,
+            0 0 22px #00ff41;
+    }
+    75% {
+        text-shadow:
+            0 0 12px #00ff41,
+            0 0 18px #00ff41,
+            0 0 30px #00ff41;
+    }
+    100% {
+        text-shadow:
+            0 0 5px #00ff41,
+            0 0 10px #00ff41,
+            0 0 20px #00ff41;
+    }
+}
+
+.submit-update-btn input[type="submit"] {
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    border-radius: 0.5em;
+    font-size: 22px;
+    font-family: monospace;
+    text-shadow: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    padding: 0.5em 1.5em;
+}
+
+.submit-update-btn input[type="submit"]:hover {
+    background-color: #00ff00;
+    color: black;
+    border-color: #00ff00;
+}
+
+.cancel-btn a {
+    text-decoration: none;
+    font-size: 22px;
+    border: 1px solid black;
+    color: red;
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
+    transition: all 0.2s ease;
+    font-family: monospace;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.cancel-btn a:hover {
+    color: black;
+    background-color: red;
+}
+
+.update-post-header, .title-label-specs, .content-label-specs, .submit-update-btn, .cancel-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+}
+
+.title-label , .content-label {
+    color: #00ff00;
+    animation: flicker 0.15s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.85; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9;}
+}

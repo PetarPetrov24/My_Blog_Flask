@@ -1,0 +1,98 @@
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+}
+
+.content-label, .title-label {
+    padding-bottom: 1em;
+     animation: flicker 0.15s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.85; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9;}
+}
+
+.content-text-box, .title-text-box {
+    border: 1px solid #00ff00;
+    border-radius: 0.3em;
+    background-color: black;
+    color: #00ff00;
+}
+
+.create-post-header h2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-shadow:
+        0 0 5px #00ff41,
+        0 0 10px #00ff41,
+        0 0 20px #00ff41;
+    animation: neonPulse 1.5s infinite alternate;
+}
+
+@keyframes neonPulse {
+    0% {
+        text-shadow:
+            0 0 5px #00ff41,
+            0 0 10px #00ff41,
+            0 0 20px #00ff41;
+    }
+    25% {
+        text-shadow:
+            0 0 10px #00ff41,
+            0 0 15px #00ff41,
+            0 0 25px #00ff41;
+    }
+    50% {
+        text-shadow:
+            0 0 7px #00ff41,
+            0 0 12px #00ff41,
+            0 0 22px #00ff41;
+    }
+    75% {
+        text-shadow:
+            0 0 12px #00ff41,
+            0 0 18px #00ff41,
+            0 0 30px #00ff41;
+    }
+    100% {
+        text-shadow:
+            0 0 5px #00ff41,
+            0 0 10px #00ff41,
+            0 0 20px #00ff41;
+    }
+}
+
+.title-label-specs, .content-label-specs, .submit-btn-primary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+}
+
+.submit-btn-primary, .content-label-specs, .title-label-spec {
+    border-radius: 2em;
+}
+
+.submit-btn-primary:hover, .content-label-specs:hover, .title-label-spec:hover {
+    border-color: #00ff00;
+}
+
+.btn-primary {
+    font-family: monospace;
+    color: #00ff00;
+    background-color: black;
+    border: 1px solid #00ff00;
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #00ff00;
+    color: black;
+}
+
