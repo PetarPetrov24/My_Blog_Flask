@@ -121,3 +121,9 @@ form.search-form {
     left: 850px;
     
 }
+
+.search-header h2, .search-output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
