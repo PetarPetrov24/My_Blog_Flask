@@ -15,7 +15,6 @@ class UpdateForm(FlaskForm):
 class PostDelete(FlaskForm):
     submit = SubmitField('Delete Post')
 
-
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])

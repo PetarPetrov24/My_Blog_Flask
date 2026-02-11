@@ -98,3 +98,26 @@
     background-color: red;
     color: black;
 }
+
+.search-form input {
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    border: 1px solid #00ff00;
+    background-color: black;
+    color: #00ff00;
+}
+
+.search-form button {
+    background-color: #00ff00;
+    color: black;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+form.search-form {
+    position: relative;
+    top: 10px;
+    left: 850px;
+    
+}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Search results for: "{{ query }}"</h2>
+
+{% if results %}
+    <ul>
+    {% for post in results %}
+        <li><a href="{{ url_for('post_detail', id=post.id) }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found.</p>
+{% endif %}
+{% endblock %}

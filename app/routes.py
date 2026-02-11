@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, flash
+from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import check_password_hash
 from .forms import PostForm, PostDelete, LoginForm
@@ -92,3 +92,15 @@ def register_app(app):
     def logout():
         logout_user()
         return redirect(url_for('posts'))
+
+    @app.route("/search")
+    def search():
+        query = request.args.get('q', '')
+        if query:
+            results = Post.query.filter(
+                Post.title.ilike(f"%{query}%") |
+                Post.content.ilike(f"%{query}%")
+            ).all()
+        else:
+            results = []
+        return render_template("search_results.html", query=query, results=results)
