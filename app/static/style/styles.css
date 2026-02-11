@@ -25,6 +25,11 @@ a:hover {
     padding: 0;
 }
 
+.authentication-user {
+    position: absolute;
+    z-index: 5;
+    top: 50px;
+}
 
 .nav-bar li a {
     color: #00ff00;

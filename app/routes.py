@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, url_for, flash
-from .forms import PostForm, PostDelete
-from .models import Post
+from flask_login import login_user, logout_user, login_required, current_user
+from werkzeug.security import check_password_hash
+from .forms import PostForm, PostDelete, LoginForm
+from .models import Post, Admin
 from .extensions import db
 
 
@@ -32,6 +34,7 @@ def register_app(app):
         return render_template("post_detail.html", post=post)
 
     @app.route('/create-post', methods=['GET', 'POST'])
+    @login_required
     def create_post():
         form = PostForm()
         if form.validate_on_submit():
@@ -43,6 +46,7 @@ def register_app(app):
         return render_template('create_post.html', form=form)
 
     @app.route('/delete-post/<int:id>', methods=['GET', 'POST'])
+    @login_required
     def delete_post(id):
         post = Post.query.get_or_404(id)  
         form = PostDelete()
@@ -56,6 +60,7 @@ def register_app(app):
         return render_template('delete_post.html', form=form, post=post)
 
     @app.route('/update-post/<int:id>', methods=['GET', 'POST'])
+    @login_required
     def update_post(id):
         post = Post.query.get_or_404(id)
         form = PostForm(obj=post)  
@@ -68,3 +73,22 @@ def register_app(app):
             return redirect(url_for('post_detail', id=post.id))
 
         return render_template('update_post.html', form=form, post=post)
+    
+    @app.route('/admin-login', methods=['GET', 'POST'])
+    def login():
+        form = LoginForm()
+        if form.validate_on_submit():
+            admin = Admin.query.filter_by(username=form.username.data).first()
+
+            if admin and check_password_hash(admin.password_hash, form.password.data):
+                login_user(admin)
+                return redirect(url_for('posts'))
+            
+            flash('Invalid credentials')
+        return render_template('login.html', form=form)
+
+    @app.route('/logout')
+    @login_required
+    def logout():
+        logout_user()
+        return redirect(url_for('posts'))

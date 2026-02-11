@@ -1,31 +1,16 @@
 body {
     background-color: black;
-    color: #00ff00;
-    font-family: 'Courier New', monospace;
-}
-
-.content-label, .title-label {
-    padding-bottom: 1em;
-    animation: flicker 0.15s infinite alternate;
-}
-
-@keyframes flicker {
-    0% { opacity: 0.85; }
-    50% { opacity: 1; }
-    100% { opacity: 0.9;}
-}
-
-.content-text-box, .title-text-box {
-    border: 1px solid #00ff00;
-    border-radius: 0.3em;
-    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
     color: #00ff00;
 }
 
-.create-post-header h2{
+.admin-outer-scope {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+}
+
+.admin-header {
     text-shadow:
         0 0 5px #00ff41,
         0 0 10px #00ff41,
@@ -66,33 +51,33 @@ body {
     }
 }
 
-.title-label-specs, .content-label-specs, .submit-btn-primary {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2em;
+.admin-password-label, .admin-username-label {
+    text-align: center;
+    padding: 1em 0 1em 0;
+    animation: flicker 0.15s infinite alternate;
 }
 
-.submit-btn-primary, .content-label-specs, .title-label-spec {
-    border-radius: 2em;
+@keyframes flicker {
+    0% { opacity: 0.85; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9;}
 }
 
-.submit-btn-primary:hover, .content-label-specs:hover, .title-label-spec:hover {
-    border-color: #00ff00;
+.admin-login-btn {
+    padding-top: 1em;
+    text-align: center;
+    
 }
 
 .btn-primary {
-    font-family: monospace;
     color: #00ff00;
-    background-color: black;
     border: 1px solid #00ff00;
-    padding: 0.5em 1em;
-    border-radius: 0.4em;
-    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
 }
 
 .btn-primary:hover {
-    background-color: #00ff00;
     color: black;
-}
+    background-color: #00ff00;
 
+}

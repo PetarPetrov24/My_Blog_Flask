@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css')}}">
+</head>
+<body>
+    <div class="admin-outer-scope">
+        <div class="admin-header">
+            <h2>Admin Login</h2>
+        </div>
+            
+        <form method="POST">
+            {{ form.hidden_tag() }}
+
+            <div class="admin-username-box">
+                <div class="admin-username-label">
+                    {{ form.username.label }}
+                </div>
+                
+                <div class="admin-username-input">
+                    {{ form.username() }}
+                </div>
+            </div>
+                
+            <div class="admin-password-box">
+                <div class="admin-password-label">
+                    {{ form.password.label }}
+                </div>
+
+                <div class="admin-password-input">
+                    {{ form.password() }}
+                </div>
+            </div>
+                
+            <div class="admin-login-btn">
+                {{ form.submit(class="btn-primary") }}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

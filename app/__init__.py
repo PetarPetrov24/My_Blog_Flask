@@ -1,6 +1,7 @@
 from flask import Flask, render_template
-from .extensions import db
+from .extensions import db, login_manager
 from .routes import register_app
+from .models import Admin
 from decouple import config
 
 
@@ -21,6 +22,12 @@ def create_app():
     db.init_app(app)
 
     register_app(app)
+
+    login_manager.init_app(app)
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return Admin.query.get(int(user_id))
 
 
     return app
