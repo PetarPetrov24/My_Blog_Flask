@@ -49,7 +49,7 @@ Contains four sections:
 
 • Conclusion
 
-Personal Portfolio
+• Personal Portfolio
 
  # Features ⚙️
 
