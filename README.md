@@ -1,11 +1,11 @@
-# Flask Matrix Blog 🟢
+# Flask Matrix Blog 
 
 A Matrix-inspired Flask web application designed to explore both the fundamentals and advanced features of the Flask framework.
 The project combines storytelling, animations, and authentication with a fully functional blog system where only the admin can manage posts.
 
 The goal of this project is to deepen my understanding of Flask and share practical knowledge about web development and programming.
 
-# Concept 🧠
+# Concept 
 
 **The blog experience is inspired by The Matrix:**
 
@@ -21,17 +21,17 @@ The goal of this project is to deepen my understanding of Flask and share practi
 
 • glitch, flicker, glow and pulse animations
 
-# Pages & Structure📄
+# Pages & Structure
 
-# Intro 🕶️
+# Intro 
 
 • Interactive onboarding inspired by Morpheus guiding Neo into the real world through a system portal.
 
-# Home 🏠
+# Home 
 
 • Overview of the project and its purpose.
 
-# Posts 📝
+# Posts 
 
 • List of articles related to Flask, programming and web development
 
@@ -39,7 +39,7 @@ The goal of this project is to deepen my understanding of Flask and share practi
 
 • Individual post detail pages
 
-# About ℹ️
+# About 
 
 Contains four sections:
 
@@ -51,7 +51,7 @@ Contains four sections:
 
 • Personal Portfolio
 
- # Features ⚙️
+ # Features 
 
 • Admin authentication system
 
@@ -69,7 +69,7 @@ Contains four sections:
 
 • Matrix-style animations and UI effects
 
-# Security 🔐
+# Security 
 
 • Password hashing via Werkzeug Security
 
@@ -79,7 +79,7 @@ Contains four sections:
 
 • Authentication required for admin actions
 
-# Tech Stack 🧱
+# Tech Stack 
 
 • Languages: Python ,JavaScript
 <br>
@@ -91,7 +91,8 @@ Contains four sections:
 <br>
 • Libraries & Tools: Flask-Login, Flask-WTF, WTForms, Werkzeug Security
 <br>
-# Project Goals 🎯
+
+# Project Goals 
 
 • Strengthen my understanding of Flask architecture
 
@@ -103,7 +104,7 @@ Contains four sections:
 
 • Share knowledge about Flask and development
 
-# Future Improvements🔮
+# Future Improvements
 
 • Pagination for posts
 
@@ -117,6 +118,6 @@ Contains four sections:
 
 • Production deployment configuration
 
-# Author👨‍💻
+# Author
 
 • Created as a personal learning project focused on mastering Flask and building creative web experiences.
