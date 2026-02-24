@@ -1,123 +1,43 @@
-# Flask Matrix Blog 
+# Flask Matrix Blog
 
-A Matrix-inspired Flask web application designed to explore both the fundamentals and advanced features of the Flask framework.
-The project combines storytelling, animations, and authentication with a fully functional blog system where only the admin can manage posts.
+Flask Matrix Blog is a Matrix-inspired web application built with Flask. It combines storytelling, animations, and authentication with a fully functional blog system where only the administrator can manage posts. The project was created to explore both the fundamental and more advanced features of Flask while sharing practical knowledge about web development and programming.
 
-The goal of this project is to deepen my understanding of Flask and share practical knowledge about web development and programming.
+## Concept
 
-# Concept 
+The blog experience is inspired by The Matrix. Users begin with an interactive introduction that features messages from Morpheus and guides them into the system. A white bunny appears and opens a portal, leading into the main application.
 
-**The blog experience is inspired by The Matrix:**
+The entire interface follows a Matrix-style aesthetic. The design uses neon green typography on a dark theme and includes glitch, flicker, glow, and pulse animations to create an immersive atmosphere.
 
-• Users begin with an interactive intro featuring messages from Morpheus
+## Pages and Structure
 
-• A white bunny appears and opens a portal into the “system”
+The Intro page provides an interactive onboarding experience inspired by Morpheus guiding Neo into the real world through a system portal.
 
-**The entire interface follows a Matrix aesthetic:**
+The Home page gives an overview of the project and explains its purpose.
 
-• neon green typography
+The Posts page displays articles related to Flask, programming, and web development. It includes search functionality that allows users to search by title or content. Each post also has its own detail page.
 
-• dark theme UI
+The About page contains four sections: an introduction, an explanation of why I chose Flask instead of Django, a conclusion, and a personal portfolio section.
 
-• glitch, flicker, glow and pulse animations
+## Features
 
-# Pages & Structure
+The application includes an administrator authentication system built with Flask-Login. It supports full CRUD functionality, allowing the admin to create, update, and delete posts. Administrative routes are protected to prevent unauthorized access. The project includes post search functionality, environment variable protection using a .env file, and template rendering with Jinja2. The user interface also includes custom Matrix-style animations and visual effects.
 
-# Intro 
+## Security
 
-• Interactive onboarding inspired by Morpheus guiding Neo into the real world through a system portal.
+Passwords are securely hashed using Werkzeug Security. Sensitive configuration data is stored in a .env file. CSRF protection is implemented through Flask-WTF. All administrative actions require proper authentication.
 
-# Home 
+## Tech Stack
 
-• Overview of the project and its purpose.
+The backend is built with Python and Flask. The frontend is developed using HTML, CSS, and JavaScript. PostgreSQL is used as the database system. The project also uses Flask-Login, Flask-WTF, WTForms, and Werkzeug for authentication, form handling, and security.
 
-# Posts 
+## Project Goals
 
-• List of articles related to Flask, programming and web development
+The main goal of this project was to strengthen my understanding of Flask architecture and application structure. It was also designed to help me practice authentication and authorization, build a themed user interface with custom animations, create a real-world CRUD web application, and share knowledge about Flask and web development.
 
-• Search functionality by title and content
+## Future Improvements
 
-• Individual post detail pages
+Future improvements may include adding pagination for posts, setting up Docker deployment, implementing unit tests with pytest, creating API endpoints, adding role-based user permissions, and preparing a production-ready deployment configuration.
 
-# About 
+## Author
 
-Contains four sections:
-
-• Introduction
-
-• Why I chose Flask instead of Django
-
-• Conclusion
-
-• Personal Portfolio
-
- # Features 
-
-• Admin authentication system
-
-• Secure login with Flask-Login
-
-• CRUD operations (Create, Update, Delete posts)
-
-• Protected admin routes
-
-• Post search functionality
-
-• Environment variable protection using .env
-
-• Template rendering with Jinja2
-
-• Matrix-style animations and UI effects
-
-# Security 
-
-• Password hashing via Werkzeug Security
-
-• Sensitive configuration stored in .env
-
-• CSRF protection through Flask-WTF
-
-• Authentication required for admin actions
-
-# Tech Stack 
-
-• Languages: Python ,JavaScript
-<br>
-• Frontend: HTML, CSS
-<br>
-• Backend: Flask
-<br>
-• Database: PostgreSQL
-<br>
-• Libraries & Tools: Flask-Login, Flask-WTF, WTForms, Werkzeug Security
-<br>
-
-# Project Goals 
-
-• Strengthen my understanding of Flask architecture
-
-• Practice authentication and authorization
-
-• Build a themed UI with custom animations
-
-• Create a real-world CRUD web application
-
-• Share knowledge about Flask and development
-
-# Future Improvements
-
-• Pagination for posts
-
-• Docker deployment
-
-• Unit testing with pytest
-
-• API endpoints
-
-• Role-based user permissions
-
-• Production deployment configuration
-
-# Author
-
-• Created as a personal learning project focused on mastering Flask and building creative web experiences.
+This project was created as a personal learning experience focused on mastering Flask and building creative, themed web applications.
