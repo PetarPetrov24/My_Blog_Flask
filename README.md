@@ -12,11 +12,22 @@ The entire interface follows a Matrix-style aesthetic. The design uses neon gree
 
 The Intro page provides an interactive onboarding experience inspired by Morpheus guiding Neo into the real world through a system portal.
 
+<img width="1379" height="711" alt="image" src="https://github.com/user-attachments/assets/4ad9a531-bd6f-491c-800a-c783c9cfb549" />
+
 The Home page gives an overview of the project and explains its purpose.
+
+<img width="1916" height="456" alt="image" src="https://github.com/user-attachments/assets/8b7e8f76-69ea-44ab-9f77-b88888291db0" />
+
 
 The Posts page displays articles related to Flask, programming, and web development. It includes search functionality that allows users to search by title or content. Each post also has its own detail page.
 
+<img width="1919" height="430" alt="image" src="https://github.com/user-attachments/assets/815d8d04-9614-463f-b958-55d8ede0fd26" />
+
+
 The About page contains four sections: an introduction, an explanation of why I chose Flask instead of Django, a conclusion, and a personal portfolio section.
+
+<img width="1919" height="855" alt="image" src="https://github.com/user-attachments/assets/1c24ed0c-502d-4283-a8be-e312fd097bf4" />
+
 
 ## Features
 
